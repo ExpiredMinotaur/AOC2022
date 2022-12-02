@@ -1,16 +1,16 @@
 fun main() {
     fun part1(input: List<String>): Int {
         val elves = input.chunkedByBlank() //separate elves
-                .map { cal -> cal.sumOf { it.toInt() } } //count calories
+            .map { cal -> cal.sumOf { it.toInt() } } //count calories
         return elves.max() //return max amount of calories
     }
 
     fun part2(input: List<String>): Int {
         return input.chunkedByBlank()//separate elves
-                .map { cal -> cal.sumOf { it.toInt() } } //count calories
-                .sortedDescending() //sort elves by calories
-                .take(3) //take top 3
-                .sum() //sum top 3
+            .map { cal -> cal.sumOf { it.toInt() } } //count calories
+            .sortedDescending() //sort elves by calories
+            .take(3) //take top 3
+            .sum() //sum top 3
     }
 
     // test if implementation meets criteria from the description, like:
