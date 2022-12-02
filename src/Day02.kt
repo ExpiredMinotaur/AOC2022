@@ -12,11 +12,9 @@ fun main() {
             val game = line.split(" ")
             val opponent = opponentMap[game[0]]
             val player = playerMap[game[1]]
-            val win = winMap[player] == opponent
-            val draw = player == opponent
 
-            if (win) score += 6 //6 points for win
-            else if (draw) score += 3 //3 points for win
+            if (winMap[player] == opponent) score += 6 //6 points for win
+            else if (player == opponent) score += 3 //3 points for win
             score += player!! //always score value of what the player played
         }
 
