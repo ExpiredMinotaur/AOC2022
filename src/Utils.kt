@@ -23,3 +23,6 @@ fun List<String>.chunkedByBlank(): List<List<String>> =
             acc.last().add(item)
         acc
     }
+
+fun <T> List<List<T>>.transpose(): List<List<T>> =
+    this[0].indices.map { j -> this.indices.reversed().map { i -> this[i][j] } }
